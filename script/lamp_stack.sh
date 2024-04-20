@@ -47,13 +47,13 @@ echo "Git configured successfully."
 echo "Cloning PHP application from GitHub..."
 sudo rm -r php_application
 mkdir -p php_application
-git clone https://github.com/mohsinenur/E-Commerce-Website-Using-PHP.git  php_application
+git clone https://github.com/PuneethReddyHC/online-shopping-system-advanced.git  php_application
 echo "PHP application cloned successfully."
 
 # Configure Apache web server
 echo "Configuring Apache web server..."
 echo $('pwd')
-sudo mv  php_application/  /var/www/html/  
+sudo mv  php_application/  /var/www/html/
 sudo chown -R www-data:www-data /var/www/html/php_application
 sudo chmod -R 755 /var/www/html/php_application
 cd ..
