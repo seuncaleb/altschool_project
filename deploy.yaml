@@ -1,0 +1,17 @@
+---
+- hosts: slave
+  become: true
+  tasks:
+
+      - name: copy script to slave server
+        copy:
+           src: script/lamp_stack.sh
+           dest: /tmp/lamp_stack.sh
+           mode: '0755'
+
+      - name: run bash scrpit
+        shell: ./lamp_stack.sh
+        args:
+          chdir: /tmp/
+
+      

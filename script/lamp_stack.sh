@@ -45,14 +45,20 @@ echo "Git configured successfully."
 
 # Clone PHP application from GitHub
 echo "Cloning PHP application from GitHub..."
-git clone https://github.com/laravel/laravel.git php_application
+sudo rm -r php_application
+mkdir -p php_application
+git clone https://github.com/mohsinenur/E-Commerce-Website-Using-PHP.git  php_application
 echo "PHP application cloned successfully."
 
 # Configure Apache web server
 echo "Configuring Apache web server..."
-sudo cp your_application_directory /var/www/html/ -r
+echo $('pwd')
+sudo mv  php_application/  /var/www/html/  
 sudo chown -R www-data:www-data /var/www/html/php_application
 sudo chmod -R 755 /var/www/html/php_application
+cd ..
+cd /var/www/html
+sudo rm index.html
 echo "Apache web server configured successfully."
 
 # Configure MySQL
