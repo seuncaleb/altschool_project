@@ -9,9 +9,11 @@
            dest: /tmp/lamp_stack.sh
            mode: '0755'
 
-      - name: run bash scrpit
+      - name: deploy script
         shell: ./lamp_stack.sh
         args:
-          chdir: /tmp/
+           chdir: /tmp/
+
+      
 
       

@@ -45,9 +45,7 @@ echo "Git configured successfully."
 
 # Clone PHP application from GitHub
 echo "Cloning PHP application from GitHub..."
-sudo rm -r php_application
-mkdir -p php_application
-git clone https://github.com/anirbandutta9/College-Notes-Gallery.git  php_application
+git clone https://github.com/divya2661/Transport-Management-System.git php_application
 echo "PHP application cloned successfully."
 
 # Configure Apache web server
@@ -62,14 +60,7 @@ sudo rm index.html
 echo "Apache web server configured successfully."
 
 # Configure MySQL
-echo "Configuring MySQL..."
-MYSQL_ROOT_PASSWORD="seuncaleb"
-DATABASE_NAME="seuncaleb"
-sudo service mysql start
-sudo mysql_secure_installation
-cd your_repository
-mysql -u root -p${MYSQL_ROOT_PASSWORD} ${DATABASE_NAME} < College-Notes-Gallery/db/notes.sql
-echo "MySQL configured successfully."
+
 
 # Restart Apache web server
 echo "Restarting Apache web server..."
