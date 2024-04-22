@@ -6,3 +6,6 @@ Second Semester Project
 
 ## Ansible Deploy 
 ![ansible deploy](assets/ansible.png)
+
+## Cronjob 
+![cronjob](assets/cronjob.png)
