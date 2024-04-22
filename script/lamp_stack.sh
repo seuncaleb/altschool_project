@@ -47,7 +47,7 @@ echo "Git configured successfully."
 echo "Cloning PHP application from GitHub..."
 sudo rm -r php_application
 mkdir -p php_application
-git clone https://github.com/PuneethReddyHC/online-shopping-system-advanced.git  php_application
+git clone https://github.com/anirbandutta9/College-Notes-Gallery.git  php_application
 echo "PHP application cloned successfully."
 
 # Configure Apache web server
@@ -63,10 +63,12 @@ echo "Apache web server configured successfully."
 
 # Configure MySQL
 echo "Configuring MySQL..."
-sudo mysql -e "CREATE DATABASE seuncaleb;"
-sudo mysql -e "CREATE USER 'seuncaleb'@'localhost' IDENTIFIED BY 'seuncaleb';"
-sudo mysql -e "GRANT ALL PRIVILEGES ON seuncaleb.* TO 'seuncaleb'@'localhost';"
-sudo mysql -e "FLUSH PRIVILEGES;"
+MYSQL_ROOT_PASSWORD="seuncaleb"
+DATABASE_NAME="seuncaleb"
+sudo service mysql start
+sudo mysql_secure_installation
+cd your_repository
+mysql -u root -p${MYSQL_ROOT_PASSWORD} ${DATABASE_NAME} < College-Notes-Gallery/db/notes.sql
 echo "MySQL configured successfully."
 
 # Restart Apache web server
